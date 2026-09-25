@@ -77,9 +77,9 @@ sealed class Usuario permits Administrador, Cliente {
 protected String nombreUsuario;
 public Usuario(String nombreUsuario) {
 this.nombreUsuario = nombreUsuario;
+}
 public void mostrarDatos() {
 System.out.println("Usuario: " + nombreUsuario);
-}
 }
 }
 final class Administrador extends Usuario {
@@ -132,8 +132,8 @@ cliente.mostrarDatos();
 // =====================================================
 // CASO 1: Intentar sobrescribir el método final mostrarIdentificacion()
 // Error: mostrarIdentificacion() in Tester cannot override
-mostrarIdentificacion() in Empleado; overridden method is final
-// /*
+//mostrarIdentificacion() in Empleado; overridden method is final
+/*
 class Tester extends Empleado {
 public Tester(String nombre, int edad, double sueldo) {
 super(nombre, edad, sueldo);
